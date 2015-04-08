@@ -1,5 +1,11 @@
 # piethat
 
+Interactive (in terminal) piechart creation.
+
+command line usage:
+
+$ python interactive_python.py 'path/to/save/piechart/image/to'
+
 Fork this repository
 
 -or-
