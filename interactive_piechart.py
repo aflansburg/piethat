@@ -19,8 +19,6 @@ except IndexError:
 else:
 	file_path = sys.argv[1]
 filename = raw_input('Please enter a file name. File will be saved with this name to the path ' + file_path + ":  ")
-print("PIE CHARTS ARE GREAT")
-print("")
 print("This script requires a minimum of 2 slices.")
 slices = []
 sizes = []
