@@ -44,6 +44,6 @@ plt.rcParams['patch.edgecolor'] = 'white'
 plt.rcParams['lines.linewidth'] = 4
 plt.pie(sizes, labels=slices, colors = colors, shadow = False, startangle=90, autopct='%1.f%%', radius=0.5)
 plt.axis('equal')
-plt.tight_layout()
+# plt.tight_layout()
 savefig(savelocation, dpi=225, bbox_inches='tight')
 os.system('open ' + location + filename + '.png')
