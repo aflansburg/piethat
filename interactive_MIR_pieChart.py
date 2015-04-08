@@ -10,7 +10,15 @@ from matplotlib import pyplot as plt
 import numpy as np
 """
 """
-os.system('clear')
+
+try:
+	sys.argv[1]
+except IndexError:
+	print("""Please define the path. Ex: "python interactive_MIR_pieChart.py /users/yourName/yourPath" """)
+	exit()
+else:
+	file_path = sys.argv[1]
+filename = raw_input('What is the filename? This pie chart will be saved to the path ' + file_path + ":  ")
 print("PIE CHARTS ARE GREAT")
 print("")
 print("This script requires a minimum of 2 slices and a maximum of 7 slices")
@@ -25,8 +33,7 @@ for i in range (0,i):
     sizes.append(input('Slice #%d size: ' %(i+1)))
 if sum(sizes) > 100:
     print("!!! FYI: Sizes are greater than 100 !!!")
-filename = raw_input('What is the filename - block number, contact name -')
-location = '/Users/abram/Dropbox (MarkITx)/Block Trades/PieDrop/'
+location = file_path
 savelocation = location + filename
 print("These are the slices: %s" % slices)
 print("These are the sizes: %s" % sizes)
@@ -39,4 +46,4 @@ plt.pie(sizes, labels=slices, colors = colors, shadow = False, startangle=90, au
 plt.axis('equal')
 plt.tight_layout()
 savefig(savelocation, dpi=225, bbox_inches='tight')
-plt.show()
+os.system('open ' + location + filename + '.png')
