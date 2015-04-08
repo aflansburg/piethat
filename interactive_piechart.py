@@ -18,16 +18,18 @@ except IndexError:
 	exit()
 else:
 	file_path = sys.argv[1]
-filename = raw_input('What is the filename? This pie chart will be saved to the path ' + file_path + ":  ")
+filename = raw_input('Please enter a file name. File will be saved with this name to the path ' + file_path + ":  ")
 print("PIE CHARTS ARE GREAT")
 print("")
-print("This script requires a minimum of 2 slices and a maximum of 7 slices")
+print("This script requires a minimum of 2 slices.")
 slices = []
 sizes = []
 i = 0
 i = int(input('Number of slices: '))
-if i > 7 or i < 2:
-    sys.exit("ERROR: More than 7 slices or less than 2... exiting")
+if i > 15:
+    print("Warning: More than 15 slices may cause labels to become unreadable!")
+elif i < 2:
+	sys.exit("ERROR: You need more than 1 slice. Otherwise, what's the point?")
 for i in range (0,i):
     slices.append(raw_input('Slice name #%d: ' % (i+1)))
     sizes.append(input('Slice #%d size: ' %(i+1)))
