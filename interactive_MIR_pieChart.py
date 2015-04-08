@@ -13,13 +13,13 @@ import numpy as np
 os.system('clear')
 print("PIE CHARTS ARE GREAT")
 print("")
-print("This script requires a minimum of 2 slices and a maximum of 6 slices")
+print("This script requires a minimum of 2 slices and a maximum of 7 slices")
 slices = []
 sizes = []
 i = 0
 i = int(input('Number of slices: '))
-if i > 6 or i < 2:
-    sys.exit("ERROR: More than 6 slices or less than 2... exiting")
+if i > 7 or i < 2:
+    sys.exit("ERROR: More than 7 slices or less than 2... exiting")
 for i in range (0,i):
     slices.append(raw_input('Slice name #%d: ' % (i+1)))
     sizes.append(input('Slice #%d size: ' %(i+1)))
