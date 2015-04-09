@@ -19,3 +19,6 @@ Replicate it to a local directory with git clone git@github.com:aflansburg/pieth
 2. Unpack
 3. Run python setup.py install
 4. Run with python interactive_piechart.py
+
+#Dependencies
+You will need matplotlib, numpy, pylab (or use a package that contains these, I prefer [Anaconda] (https://store.continuum.io/cshop/anaconda/) from Continuum Analytics.
